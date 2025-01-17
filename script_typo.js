@@ -49,7 +49,7 @@ slider.addEventListener('input', () => {
 });
 
 
-// checkboxes --------------------------------------------------------------------------------------//
+// checkboxes TITLE --------------------------------------------------------------------------------------//
 const titleButton1 = document.querySelector('.title1');
 const titleButton2 = document.querySelector('.title2');
 const titleButton3 = document.querySelector('.title3');
@@ -57,7 +57,7 @@ const titleButton3 = document.querySelector('.title3');
 checkbox1.addEventListener('input', () => {
   const typo1 = checkbox1.value; 
   if (checkbox1.checked) {
-  textarea.style.fontFamily = 'Playpen Sans'; 
+  textarea.style.fontFamily = 'playpen sans'; 
   titleButton1.classList.add('active');
   }else {
     textarea.style.fontFamily = 'Montserrat';
@@ -68,7 +68,7 @@ checkbox1.addEventListener('input', () => {
 checkbox2.addEventListener('input', () => {
   const typo2 = checkbox2.value; 
   if (checkbox2.checked) {
-  textarea.style.fontFamily = 'Noto Serif'; 
+  textarea.style.fontFamily = 'Noto Serif';
   titleButton2.classList.add('active');
   }else {
     textarea.style.fontFamily = 'Montserrat';
@@ -111,10 +111,27 @@ radioButtons.forEach((radioButton) => {
 
 // sub-checkboxes -----------------------------------------------------------------------------------------------------//
 
-checkbox1a.addEventListener('input', () => {
-  if (checkbox1a.checked) {
-    textarea.style.fontWeight = '300'; // Par exemple : Light
-  } else {
-    textarea.style.fontWeight = '500'; // Par exemple : Medium
-  }
-});
+
+    // Function to update the font weight
+    function updateFontWeight() {
+      // Check the priorities in order
+      if (checkbox2c.checked) {
+        textarea.style.fontWeight = '900'; // Bold
+      } else if (checkbox2a.checked) {
+        textarea.style.fontWeight = '300'; // Thin
+      } else if (checkbox2b.checked) {
+        textarea.style.fontWeight = '500'; // Medium
+      } else {
+        textarea.style.fontWeight = '400'; // Default (normal)
+      }
+    }
+
+    // Attach event listeners
+    checkbox2a.addEventListener('input', updateFontWeight);
+    checkbox2b.addEventListener('input', updateFontWeight);
+    checkbox2c.addEventListener('input', updateFontWeight);
+
+    // Initialize font weight
+    updateFontWeight();
+
+

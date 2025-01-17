@@ -87,9 +87,9 @@ height: 80px;
 }
 
 label {
-color: rgb(0, 51, 255);
+color: #2f00ff;
 text-align:center ;
-font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family:'Montserrat';
 }
 
 
@@ -181,6 +181,7 @@ font-family: 'Montserrat', sans-serif;
 /* MODIFICATION CSS SUR LES CASES A COCHER ----------------------------------------------------------*/
 
 
+
 .typo1,.typo2, .typo3{
     display: flex;
     transition: 0.3s;
@@ -201,19 +202,11 @@ font-family: 'Montserrat', sans-serif;
 
 /* TYPO 1 ----------------------------------------------------------*/
 
-
-  
   .typo1 {
     display: flex;
     flex-direction: column; /* Aligne les éléments verticalement */
 }
-
-
-.title1 input[type="checkbox"] {
-    display: none; 
-  }
   
- 
   .title1 {
     font-size: 18px;
     font-weight: bold;
@@ -226,40 +219,23 @@ font-family: 'Montserrat', sans-serif;
     cursor: pointer; 
     text-align: center;
     display: inline-block; 
-    transition: transform 0.2s;
-  }
-
-  .title1.active {
-    background-color: #ff7300; 
-    border-style: outset;
-    border-color:#ff7300;
-  }
-
-  .title1.active:hover {
-    background-color: #ff7300;
-    border-style: outset;
-    border-color:#ff7300;
+    transition: 0.3s;
   }
 
   .title1:hover {
     border-style: outset; 
-    border-color:#2f00ff;
-    transform: scale(1.05); 
+    background-color: #ff7300;
+    border-color:#ff7300;
+    transform: scale(1.05);
+    transition: 0.3s; 
   }
-  
-
 
 /* TYPO 2 ----------------------------------------------------------*/
 
-  
 .typo2 {
     display: flex;
     flex-direction: column; /* Aligne les éléments verticalement */
 }
-
-  .title2 input[type="radio"] {
-    //display: none; 
-  }
 
   .title2 {
     font-size: 18px;
@@ -276,23 +252,14 @@ font-family: 'Montserrat', sans-serif;
     transition: transform 0.2s;
   }
 
-  .title2.active {
-    background-color: #ff7300; 
-    border-style: outset;
-    border-color:#ff7300;
-  }
-
-  .title2.active:hover {
-    background-color: #ff7300;
-    border-style: outset;
-    border-color:#ff7300;
-  }
-
   .title2:hover {
     border-style: outset; 
-    border-color:#2f00ff;
-    transform: scale(1.05); 
+    background-color: #ff7300;
+    border-color:#ff7300;
+    transform: scale(1.05);
+    transition: 0.3s; 
   }
+
 
   /* TYPO 3 ----------------------------------------------------------*/
 
@@ -300,10 +267,6 @@ font-family: 'Montserrat', sans-serif;
   .typo3 {
     display: flex;
     flex-direction: column; /* Aligne les éléments verticalement */
-  }
-
-  .title3 input[type="checkbox"] {
-    display: none; 
   }
 
   .title3 {
@@ -321,23 +284,12 @@ font-family: 'Montserrat', sans-serif;
     transition: transform 0.2s;
   }
 
-  .title3.active {
-    background-color: #ff7300; 
-    border-style: outset;
-    border-color:#ff7300;
-  }
-
-  .title3.active:hover {
-    background-color: #ff7300;
-    border-style: outset;
-    border-color:#ff7300;
-  }
-
   .title3:hover {
     border-style: outset; 
-    border-color:#2f00ff;
-    transform: scale(1.05); 
+    background-color: #ff7300;
+    border-color:#ff7300;
+    transform: scale(1.05);
+    transition: 0.3s; 
   }
-
 
 </style>
