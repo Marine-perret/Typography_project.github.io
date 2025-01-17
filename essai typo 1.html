@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mise en Page Dynamique</title>
+  <link rel="stylesheet" href="style-sheet.css">
+
+
+   <!-- Ajout des fonts ici -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet"></head>
+
+<body>
+  <div class="container">
+    <!-- Partie gauche -->
+    <div class="left">
+      <div class="top-left">
+        <textarea id="dynamicText" placeholder="Écrivez ici..."></textarea>
+      </div>
+      <div class="bottom-left">
+        <label><input id="colorPicker" type="color"> <br> Color</label>
+        <label><input id="colorPicker_bg" type="color"> <br>Bg Color</label>
+        <label for="slider1"></label>
+        <input type="range" id="slider1" min="0" max="100" value="16">
+        <span id="sliderValue">16</span> 
+        <label><input id="slider2" type="range" min="0" max="100" value="0"><br>Size</label> 
+      </div>
+    </div>
+
+    <!-- Partie droite -->
+    <div class="right">
+      
+      <div class="typo1"> 
+        <label class="title1">
+          <input name=titres type="radio" id="checkbox1"> Playpen Sans
+        </label>
+        <br>
+        <div class="sub-options">
+          <label><input name="typo2options"type="radio" id="checkbox1a"> Thin</label>
+          <label><input name="typo2options"type="radio" id="checkbox1b"> Medium</label>
+          <label><input name="typo2options"type="radio" id="checkbox1c"> Bold</label>
+        </div>
+      </div>
+      
+      
+
+        <div class="typo2"> 
+            <label class="title2">
+              <input name=titres type="radio" id="checkbox2"> Noto Serif
+            </label>
+                <br>
+                <div class="sub-options">
+                <label><input name="typo2options"type="radio" id="checkbox2a"> Thin</label>
+                <label><input name="typo2options"type="radio" id="checkbo2b"> Medium</label>
+                <label><input name="typo2options"type="radio" id="checkbox2c"> Bold</label>
+              </div>
+        </div>
+
+        <div class=" typo3"> 
+            <label class="title3">
+              <input name=titres type="radio" id="checkbox3"> Jura
+            </label>
+                <br>
+                <div class="sub-options">
+                <label><input name="typo2options"type="radio" id="checkbox3a"> Thin</label>
+                <label><input name="typo2options"type="radio" id="checkbox3b"> Medium</label>
+                <label><input name="typo2options"type="radio" id="checkbox3c"> Bold</label>
+              </div>
+        </div>
+    </div>
+  </div>
+</body>
+
+<script src="script_typo.js"></script>
+
+</script>
+</html>
+

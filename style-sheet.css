@@ -1,0 +1,343 @@
+<style>
+
+
+/* Appliquer un style de base */
+
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playpen+Sans:wght@100..800&display=swap');
+
+*{border: 1px solid #000 !important;}
+
+body {
+box-sizing: border-box;
+height: 100vh; /* L'écran entier est occupé */
+display: flex;
+}
+
+
+
+
+/* LAYOUT ORGANISATION ----------------------------------------------------------*/
+
+/* Conteneur principal */
+.container {
+display: flex;
+width: 100%;
+height: 100%;
+box-sizing: border-box;
+}
+
+/* Partie gauche */
+.left {
+flex: 1; /* Prend 50% de l'espace horizontal */
+display: flex;
+flex-direction: column;
+}
+
+/* Quart supérieur gauche : Textarea */
+.top-left {
+flex: 1;
+padding: 10px;
+}
+
+/* Quart inférieur gauche : Colorpicker et curseurs */
+.bottom-left {
+flex: 3; 
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center;
+gap: 20px; 
+padding: 10px;
+}
+
+/* MODIFICATION CSS SUR LA TEXT AREA ----------------------------------------------------------*/
+
+textarea {
+    width: 100%; /* Occupe toute la largeur disponible */
+    height: 100%; /* Occupe toute la hauteur du quart supérieur gauche */
+    resize: none;
+    height: 40vh;
+    border: 1px solid #2f00ff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    }
+
+/* MODIFICATION CSS SUR LES COLORPICKERS----------------------------------------------------------*/
+
+
+input[type="color"] {
+appearance: none;
+-webkit-appearance: none;
+width: 50vw;
+height: 40px;
+border: none;
+transition: 0.5s;
+}
+
+input[type="color"]:hover {
+appearance: none;
+-webkit-appearance: none;
+width: 50vw;
+height: 80px;
+}
+
+label {
+color: rgb(0, 51, 255);
+text-align:center ;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* MODIFICATION CSS SUR LES CURSEURS SIZE AND SPACING----------------------------------------------------------*/
+
+
+input[type="range"] {
+appearance: none;
+width: 50vw; /* Ajuster la largeur des sliders */
+height: 20px;
+background:#ff7300;
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-top-right-radius: 10px;
+border-top-left-radius: 10px;
+transition: 0.5s;
+}
+
+input[type="range"]:hover {
+height: 60px;
+transition: 0.5s;
+border-bottom-right-radius: 50px;
+border-bottom-left-radius: 50px;
+border-top-right-radius: 50px;
+border-top-left-radius: 50px;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+height: 60px; 
+width: 60px;
+transition: 0.5s; 
+}
+
+/*input[type="range"]:hover + #sliderValue{
+display: block;
+transition: 0.3s;
+}
+
+I DON'T KNOW HOW TO MAKE THAT RIGHT RAAAAAAAAAH
+*/
+
+input[type="range"]::-webkit-slider-thumb {
+-webkit-appearance: none; /* Nécessaire pour personnaliser le curseur */
+appearance: none; /* Bonne pratique */
+background: rgb(0, 21, 255); /* Couleur du curseur */
+width: 20px; /* Taille du curseur */
+height: 20px;
+border-radius: 50%; /* Curseur arrondi */
+cursor: pointer; /* Changer le curseur */
+transition: 0.5s;
+height: 20px;
+position: relative;
+}
+
+#sliderValue{
+    display: none;;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1500ff;
+    border-radius: 50px;
+    padding: 10px;
+    color: #FFFFFF;
+    transition: 0.3s;
+}
+
+
+
+/* Partie droite -------------------------------------------------------------------------------*/
+.right {
+flex: 1; /* Prend 50% de l'espace horizontal */
+display: flex;
+flex-direction: column;
+justify-content: space-around; /* Répartir les éléments verticalement */
+align-items: center; /* Centrer horizontalement */
+background-color: #1500ff;
+padding: 10px;
+
+}
+
+label {
+color: rgb(0, 30, 255);
+font-size: 18px;
+font-weight: bold;
+font-family: 'Montserrat', sans-serif;
+}
+
+
+/* MODIFICATION CSS SUR LES CASES A COCHER ----------------------------------------------------------*/
+
+
+.typo1,.typo2, .typo3{
+    display: flex;
+    transition: 0.3s;
+    width: 50vw;
+    height: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color:#ffffffac;
+    border-radius: 15px;
+}
+
+.typo1:hover,.typo2:hover, .typo3:hover{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* TYPO 1 ----------------------------------------------------------*/
+
+
+  
+  .typo1 {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+}
+
+
+.title1 input[type="checkbox"] {
+    display: none; 
+  }
+  
+ 
+  .title1 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Playpen sans';
+    margin-bottom: 10px;
+    padding: 10px 20px; 
+    background-color:#1500ff; 
+    color: white; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-align: center;
+    display: inline-block; 
+    transition: transform 0.2s;
+  }
+
+  .title1.active {
+    background-color: #ff7300; 
+    border-style: outset;
+    border-color:#ff7300;
+  }
+
+  .title1.active:hover {
+    background-color: #ff7300;
+    border-style: outset;
+    border-color:#ff7300;
+  }
+
+  .title1:hover {
+    border-style: outset; 
+    border-color:#2f00ff;
+    transform: scale(1.05); 
+  }
+  
+
+
+/* TYPO 2 ----------------------------------------------------------*/
+
+  
+.typo2 {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+}
+
+  .title2 input[type="radio"] {
+    //display: none; 
+  }
+
+  .title2 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'noto serif';
+    margin-bottom: 10px;
+    padding: 10px 20px; 
+    background-color:#1500ff; 
+    color: white; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-align: center;
+    display: inline-block; 
+    transition: transform 0.2s;
+  }
+
+  .title2.active {
+    background-color: #ff7300; 
+    border-style: outset;
+    border-color:#ff7300;
+  }
+
+  .title2.active:hover {
+    background-color: #ff7300;
+    border-style: outset;
+    border-color:#ff7300;
+  }
+
+  .title2:hover {
+    border-style: outset; 
+    border-color:#2f00ff;
+    transform: scale(1.05); 
+  }
+
+  /* TYPO 3 ----------------------------------------------------------*/
+
+    
+  .typo3 {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+  }
+
+  .title3 input[type="checkbox"] {
+    display: none; 
+  }
+
+  .title3 {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'jura';
+    margin-bottom: 10px;
+    padding: 10px 20px; 
+    background-color:#1500ff; 
+    color: white; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-align: center;
+    display: inline-block; 
+    transition: transform 0.2s;
+  }
+
+  .title3.active {
+    background-color: #ff7300; 
+    border-style: outset;
+    border-color:#ff7300;
+  }
+
+  .title3.active:hover {
+    background-color: #ff7300;
+    border-style: outset;
+    border-color:#ff7300;
+  }
+
+  .title3:hover {
+    border-style: outset; 
+    border-color:#2f00ff;
+    transform: scale(1.05); 
+  }
+
+
+</style>
