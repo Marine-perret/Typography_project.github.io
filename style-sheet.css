@@ -80,12 +80,8 @@ transition: 0.5s;
 }
 
 input[type="color"]:hover {
-appearance: none;
--webkit-appearance: none;
-width: 50vw;
-height: 80px;
+  height: 100px; 
 }
-
 label {
 color: #2f00ff;
 text-align:center ;
@@ -123,14 +119,6 @@ width: 60px;
 transition: 0.5s; 
 }
 
-/*input[type="range"]:hover + #sliderValue{
-display: block;
-transition: 0.3s;
-}
-
-I DON'T KNOW HOW TO MAKE THAT RIGHT RAAAAAAAAAH
-*/
-
 input[type="range"]::-webkit-slider-thumb {
 -webkit-appearance: none; /* Nécessaire pour personnaliser le curseur */
 appearance: none; /* Bonne pratique */
@@ -143,20 +131,6 @@ transition: 0.5s;
 height: 20px;
 position: relative;
 }
-
-#sliderValue{
-    display: none;;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #1500ff;
-    border-radius: 50px;
-    padding: 10px;
-    color: #FFFFFF;
-    transition: 0.3s;
-}
-
-
 
 /* Partie droite -------------------------------------------------------------------------------*/
 .right {

@@ -7,13 +7,14 @@ const colorPicker = document.getElementById('colorPicker');
 const colorPicker_bg = document.getElementById('colorPicker_bg');
 const slider1 = document.getElementById('slider1');
 const slider2 = document.getElementById('slider2');
-const checkbox1 = document.getElementById('checkbox1');
-const checkbox2 = document.getElementById('checkbox2');
-const checkbox3 = document.getElementById('checkbox3');
 
 const checkbox1a = document.getElementById('checkbox1a');
 const checkbox1b = document.getElementById('checkbox1b');
 const checkbox1c = document.getElementById('checkbox1c');
+
+const checkbox2a = document.getElementById('checkbox2a');
+const checkbox2b = document.getElementById('checkbox2b');
+const checkbox2c = document.getElementById('checkbox2c');
 
 // colorpickers ------------------------------------------------------------//
 colorPicker.addEventListener('input', () => {
@@ -39,13 +40,18 @@ slider2.addEventListener('input', () => {
   textarea.style.letterSpacing = `${spacing}px`; 
 });
 
-// Sélectionner le slider et le span
-const slider = document.getElementById('slider1');
-const sliderValueDisplay = document.getElementById('sliderValue');
 
-// Mettre à jour la valeur affichée lorsque le slider change
+const slider = document.getElementById('slider1');
+const sliderValueDisplay = document.getElementById('sliderValue1');
 slider.addEventListener('input', () => {
-  sliderValueDisplay.textContent = slider.value; // Affiche la valeur actuelle du slider
+  sliderValueDisplay.textContent = slider.value + "% size"; 
+});
+
+
+const sliderDeux = document.getElementById('slider2');
+const sliderValueDisplay2 = document.getElementById('sliderValue2');
+sliderDeux.addEventListener('input', () => {
+  sliderValueDisplay2.textContent = sliderDeux.value + "% space";
 });
 
 
@@ -57,11 +63,8 @@ const titleButton3 = document.querySelector('.title3');
 checkbox1.addEventListener('input', () => {
   const typo1 = checkbox1.value; 
   if (checkbox1.checked) {
-  textarea.style.fontFamily = 'playpen sans'; 
-  titleButton1.classList.add('active');
-  }else {
-    textarea.style.fontFamily = 'Montserrat';
-    titleButton1.classList.remove('active');
+  textarea.style.fontFamily = 'Playpen Sans'; 
+  textarea.style.fontWeight = '400';
   }
 });
 
@@ -69,10 +72,7 @@ checkbox2.addEventListener('input', () => {
   const typo2 = checkbox2.value; 
   if (checkbox2.checked) {
   textarea.style.fontFamily = 'Noto Serif';
-  titleButton2.classList.add('active');
-  }else {
-    textarea.style.fontFamily = 'Montserrat';
-    titleButton2.classList.remove('active');
+  textarea.style.fontWeight = '400';
   }
 });
 
@@ -80,58 +80,90 @@ checkbox3.addEventListener('input', () => {
   const typo3 = checkbox3.value; 
   if (checkbox3.checked) {
   textarea.style.fontFamily = 'Jura';
-  titleButton3.classList.add('active'); 
-  }else {
-    textarea.style.fontFamily = 'Montserrat';
-    titleButton3.classList.remove('active');
+  textarea.style.fontWeight = '500'; 
   }
-});
-
-
-
-const radioButtons = document.querySelectorAll('input[name="titres"]');
-
-// Ajoutez un event listener à chaque bouton radio
-radioButtons.forEach((radioButton) => {
-  radioButton.addEventListener('input', () => {
-    // Vérifiez lequel est activé
-    radioButtons.forEach((btn) => {
-      const correspondingButton = document.querySelector(`label[for="${btn.id}"]`);
-
-      if (btn.checked) {
-        textarea.style.fontFamily = btn.value; // Change la police selon le bouton coché
-        correspondingButton.classList.add('active'); // Ajoute la classe active au bouton coché
-      } else {
-        correspondingButton.classList.remove('active'); // Retire la classe active des autres
-      }
-    });
-  });
 });
 
 
 // sub-checkboxes -----------------------------------------------------------------------------------------------------//
 
+// playpen : thin, medium and bold -----------------------------------------------------------
+const subButton1thin = document.querySelector('.sub-options2');
+checkbox1a.addEventListener('input', () => {
+  const thin1a = checkbox1a.value; 
+  if (checkbox1a.checked) {
+    textarea.style.fontWeight = '200'; 
+  }
+});
 
-    // Function to update the font weight
-    function updateFontWeight() {
-      // Check the priorities in order
-      if (checkbox2c.checked) {
-        textarea.style.fontWeight = '900'; // Bold
-      } else if (checkbox2a.checked) {
-        textarea.style.fontWeight = '300'; // Thin
-      } else if (checkbox2b.checked) {
-        textarea.style.fontWeight = '500'; // Medium
-      } else {
-        textarea.style.fontWeight = '400'; // Default (normal)
-      }
-    }
+const subButton1bold = document.querySelector('.sub-options2');
+checkbox1c.addEventListener('input', () => {
+  const bold1c = checkbox1c.value; 
+  if (checkbox1c.checked) {
+    textarea.style.fontWeight = '800'; 
+  }
+});
 
-    // Attach event listeners
-    checkbox2a.addEventListener('input', updateFontWeight);
-    checkbox2b.addEventListener('input', updateFontWeight);
-    checkbox2c.addEventListener('input', updateFontWeight);
+const subButton1medium = document.querySelector('.sub-options2');
+checkbox1b.addEventListener('input', () => {
+  const medium1b = checkbox1b.value; 
+  if (checkbox1b.checked) {
+    textarea.style.fontWeight = '400'; 
+  }
+});
 
-    // Initialize font weight
-    updateFontWeight();
+// noto serif : thin, medium and bold -----------------------------------------------------------
+const subButton2thin = document.querySelector('.sub-options2');
+checkbox2a.addEventListener('input', () => {
+  const thin2a = checkbox2a.value; 
+  if (checkbox2a.checked) {
+    textarea.style.fontWeight = '200'; 
+  }
+});
+
+const subButton2bold = document.querySelector('.sub-options2');
+checkbox2c.addEventListener('input', () => {
+  const bold2c = checkbox2c.value; 
+  if (checkbox2c.checked) {
+    textarea.style.fontWeight = '800'; 
+  }
+});
+
+const subButton2medium = document.querySelector('.sub-options2');
+checkbox2b.addEventListener('input', () => {
+  const medium2b = checkbox2b.value; 
+  if (checkbox2b.checked) {
+    textarea.style.fontWeight = '400'; 
+  }
+});
+
+
+// jura : thin, medium and bold -----------------------------------------------------------
+const subButton3thin = document.querySelector('.sub-options3');
+checkbox3a.addEventListener('input', () => {
+  const thin3a = checkbox3a.value; 
+  if (checkbox3a.checked) {
+    textarea.style.fontWeight = '300'; 
+  }
+});
+
+const subButton3bold = document.querySelector('.sub-options3');
+checkbox3c.addEventListener('input', () => {
+  const bold3c = checkbox3c.value; 
+  if (checkbox3c.checked) {
+    textarea.style.fontWeight = '700'; 
+  }
+});
+
+const subButton3medium = document.querySelector('.sub-options3');
+checkbox3b.addEventListener('input', () => {
+  const medium3b = checkbox3b.value; 
+  if (checkbox3b.checked) {
+    textarea.style.fontWeight = '500'; 
+  }
+});
+
+
+
 
 
