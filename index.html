@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mise en Page Dynamique</title>
+  <title>Font Play</title>
+  <link rel="icon" href="assets/Tabs_logo.png">
   <link rel="stylesheet" href="style-sheet.css">
 
 
@@ -12,29 +13,55 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital@0;1&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
 <body>
+
+
   <div class="container">
+
     <!-- Partie gauche -->
     <div class="left">
       <div class="top-left">
-        <textarea id="dynamicText" placeholder="Écrivez ici..."></textarea>
+        <textarea id="dynamicText" placeholder="Welcome in Type and Play ! 
+
+Type, change the color, spacing and size with the button underneath, or the font on your right. 
+
+Click on the font window to learn more about them !"></textarea>
       </div>
+
       <div class="bottom-left">
-        <label><input id="colorPicker" type="color"> <br> Color</label>
-        <label><input id="colorPicker_bg" type="color"> <br>Background Color</label>
+
+          <input id="colorPicker" type="color"> 
+          <label for="colorPicker" hidden><br> Color</label>
+          <!-- <div id="color_caption"> 
+            <p>The color of the font caption</p>
+          </div> -->
+            
+          <input id="colorPicker_bg" type="color"> 
+          <label for="colorPicker_bg" hidden><br> Background color</label>
+          <!-- <div id="bg_caption"> 
+            <p>The color of the background caption</p>
+          </div> -->
+
 
         <label for="slider1">
         <input type="range" id="slider1" min="0" max="100" value="16">
         <span id="sliderValue1">16% size</span> 
+        <!-- <div id="size_caption"> 
+        The size of the font caption </p>
+        </div>  -->
 
         <label for="slider2">
         <input id="slider2" type="range" min="0" max="100" value="0">
         <span id="sliderValue2"> 0% space </span>
+        <!-- <div id="space_caption"> 
+        <p> Letter spacing, character spacing or tracking is an optically consistent typographical adjustment to the space between letters to change the visual density of a line or block of text. </p>
+      </div> -->
+
       </div>
     </div>
 
     <!-- Partie droite -->
     <div class="right">
-
+      <a href="playpen.html">
        <div class="typo1"> 
           <label class="title1">
             <input name=titres type="radio" id="checkbox1"> Playpen Sans
@@ -45,9 +72,9 @@
             <label><input name="typo2options"type="radio" id="checkbox1b"> Medium</label>
             <label><input name="typo2options"type="radio" id="checkbox1c"> Bold</label>
           </div>
-        </div> 
-
+        </div> </a>
       
+        <a href="noto_serif.html">
         <div class="typo2"> 
             <label class="title2">
               <input name=titres type="radio" id="checkbox2"> Noto Serif
@@ -58,8 +85,10 @@
                 <label><input name="typo2options"type="radio" id="checkbox2b"> Medium</label>
                 <label><input name="typo2options"type="radio" id="checkbox2c"> Bold</label>
               </div>
-        </div>
+        </div> </a>
 
+        
+        <a href="Jura.html">
         <div class=" typo3"> 
             <label class="title3">
               <input name=titres type="radio" id="checkbox3"> Jura
@@ -70,9 +99,16 @@
                 <label><input name="typo2options"type="radio" id="checkbox3b"> Medium</label>
                 <label><input name="typo2options"type="radio" id="checkbox3c"> Bold</label>
               </div>
-        </div>
+        </div> </a>
     </div>
   </div>
+  
+    <div class="footer">
+      <p> Marine Perret</p>
+      <p> Fh;P - 2024/2025</p>
+      <p> Credits : Google font, Adobe Font, Wikipedia</p>
+      </div>
+  
 </body>
 
 <script src="script_typo.js"></script>

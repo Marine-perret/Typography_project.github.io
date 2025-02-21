@@ -85,6 +85,7 @@ checkbox3.addEventListener('input', () => {
 });
 
 
+
 // sub-checkboxes -----------------------------------------------------------------------------------------------------//
 
 // playpen : thin, medium and bold -----------------------------------------------------------
@@ -162,8 +163,4 @@ checkbox3b.addEventListener('input', () => {
     textarea.style.fontWeight = '500'; 
   }
 });
-
-
-
-
 

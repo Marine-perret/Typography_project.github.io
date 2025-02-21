@@ -4,16 +4,20 @@
 /* Appliquer un style de base */
 
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playpen+Sans:wght@100..800&display=swap');
+cursor: url(assets/Artboard1.png), auto;
 
-*{border: 1px solid #000 !important;}
 
 body {
 box-sizing: border-box;
 height: 100vh; /* L'écran entier est occupé */
 display: flex;
+
+
 }
 
-
+html, body{
+  scroll-behavior: smooth;
+} 
 
 
 /* LAYOUT ORGANISATION ----------------------------------------------------------*/
@@ -25,6 +29,7 @@ width: 100%;
 height: 100%;
 box-sizing: border-box;
 }
+
 
 /* Partie gauche */
 .left {
@@ -67,26 +72,32 @@ textarea {
     box-sizing: border-box;
     }
 
+
+    .bottom-left{
+      height: 60vh;
+    }
+
 /* MODIFICATION CSS SUR LES COLORPICKERS----------------------------------------------------------*/
+
+    /* COLORPICKERS LOOK----------------------------------------------------------*/
 
 
 input[type="color"] {
 appearance: none;
--webkit-appearance: none;
 width: 50vw;
-height: 40px;
+height: 50px;
 border: none;
 transition: 0.5s;
 }
 
-input[type="color"]:hover {
-  height: 100px; 
-}
 label {
 color: #2f00ff;
 text-align:center ;
 font-family:'Montserrat';
+margin: 0px;
+padding: 0%;
 }
+
 
 
 /* MODIFICATION CSS SUR LES CURSEURS SIZE AND SPACING----------------------------------------------------------*/
@@ -102,18 +113,11 @@ border-bottom-left-radius: 10px;
 border-top-right-radius: 10px;
 border-top-left-radius: 10px;
 transition: 0.5s;
+margin-bottom: 50px;
 }
 
-input[type="range"]:hover {
-height: 60px;
-transition: 0.5s;
-border-bottom-right-radius: 50px;
-border-bottom-left-radius: 50px;
-border-top-right-radius: 50px;
-border-top-left-radius: 50px;
-}
 
-input[type="range"]:hover::-webkit-slider-thumb {
+input[type="range"]:focus::-webkit-slider-thumb {
 height: 60px; 
 width: 60px;
 transition: 0.5s; 
@@ -132,6 +136,10 @@ height: 20px;
 position: relative;
 }
 
+
+
+
+
 /* Partie droite -------------------------------------------------------------------------------*/
 .right {
 flex: 1; /* Prend 50% de l'espace horizontal */
@@ -141,6 +149,7 @@ justify-content: space-around; /* Répartir les éléments verticalement */
 align-items: center; /* Centrer horizontalement */
 background-color: #1500ff;
 padding: 10px;
+text-decoration:none ;
 
 }
 
@@ -149,30 +158,50 @@ color: rgb(0, 30, 255);
 font-size: 18px;
 font-weight: bold;
 font-family: 'Montserrat', sans-serif;
+text-decoration:none ;
 }
 
 
 /* MODIFICATION CSS SUR LES CASES A COCHER ----------------------------------------------------------*/
 
-
+.right a {
+  text-decoration: none; 
+}
 
 .typo1,.typo2, .typo3{
-    display: flex;
+    display: relative;
     transition: 0.3s;
-    width: 50vw;
+    width: 40vw;
     height: 150px;
     text-align: center;
     justify-content: center;
     align-items: center;
     background-color:#ffffffac;
     border-radius: 15px;
+    text-decoration: none ;
 }
 
 .typo1:hover,.typo2:hover, .typo3:hover{
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     transition: 0.3s;
+    cursor: pointer;
 }
+
+#hover_font_playpen {
+  display: none;
+  position: absolute; 
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.typo3:hover ~ #hover_font_playpen{
+display: block;
+}
+
+
+
 
 /* TYPO 1 ----------------------------------------------------------*/
 
@@ -180,7 +209,8 @@ font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column; /* Aligne les éléments verticalement */
 }
-  
+
+
   .title1 {
     font-size: 18px;
     font-weight: bold;
@@ -201,8 +231,10 @@ font-family: 'Montserrat', sans-serif;
     background-color: #ff7300;
     border-color:#ff7300;
     transform: scale(1.05);
-    transition: 0.3s; 
+    transition: 0.3s;
+    cursor: pointer;
   }
+
 
 /* TYPO 2 ----------------------------------------------------------*/
 
@@ -266,4 +298,23 @@ font-family: 'Montserrat', sans-serif;
     transition: 0.3s; 
   }
 
-</style>
+
+/* FOOTER -----------------------------------------------------------------------------------*/
+
+.footer {
+  display: flex;
+  flex-direction: line;
+  position: fixed;
+  font-size: 10px;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  
+  gap: 20px;
+  text-align: center;
+}
+
+
+
+  

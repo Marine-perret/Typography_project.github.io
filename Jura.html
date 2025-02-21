@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jura</title>
+  <link rel="icon" href="assets/Tabs_logo.png">
+
+
+   <!-- Ajout des fonts ici -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital@0;1&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+
+
+   <body>
+
+    <a href="Index.html">
+      <img id="back" src="assets/Return--Streamline-Carbon.png">
+    </a>
+          <nav class="header">
+            <p id="titre"> <b>JURA</b><p>
+            <a  href="https://fonts.google.com/specimen/Jura">
+              <img id="google_font_playpen" src="assets/Google_font.png">
+            </a>
+          </nav>
+
+          
+          
+          <div class="content">
+            <p class="playpen_bio"> Jura is a family of sans-serif fonts in the Eurostile vein. It was originally inspired by some work I was doing for the FreeFont project in designing a Kayah Li range for FreeMono. The Latin alphabet is using the same kinds of strokes and curves as the Kayah Li glyphs, and thus Jura was born. It has been expanded to include glyphs for the Cyrillic and Greek alphabets as well.
+
+              <br> <br> The original Kayah Li glyphs have been included in this font. Note that glyphs for writing mainstream Burmese are not and never have been a part of this font. 
+              <br> <br> The Jura family has an unfortunate name clash with Ed Merritt's Jura serif font. July 2016 Alexei Vanyashin redesigned Jura as part of Google Fonts Improvement project. This repo contains both legacy v2.26, and the new v.3.</p>
+              <div class="exemples_playpen">
+              <img src="assets/jura/jura1.jpg">
+              <img src="assets/jura/jura2.avif">
+              <img src="assets/jura/jura3.avif"> 
+              <img src="assets/jura/jura4.avif">
+              <img src="assets/jura/jura5.avif">
+           </div>
+          
+            <div class="author_section">
+              <div class="pic_and_bio_section">
+                <a  href="https://danieljohnson.name/"> 
+                <img id="author_pic" src="assets/jura/Daniel_Johnson-300x300.jpg"></a>
+                <p id="author_text"> <b> <a id="author_bio" href="https://fonts.adobe.com/designers/laura-meseguer">Daniel Johnson</a></b> is a type designer known for creating the Jura typeface, a sans-serif font inspired by the Eurostile style. His <b><a id="author_bio" href="https://danieljohnson.name/">website</a> </b> is very lacunar, with not much information, and it was also a struggle to find a picture of him. <br> <br> The few information that I could find about him is that besides Jura, Daniel Johnson has designed other fonts such as Judson, a serif typeface aimed at promoting literacy in Africa, and Megrim, a decorative, futuristic-style font.</p>
+              </div>
+                <img src="assets/jura/jura_side.jpg">
+             
+              
+            </div>
+             
+          </div>
+       
+
+    <style> 
+
+
+* {
+    box-sizing: border-box; /* Évite que les marges et paddings dépassent */
+}
+
+body {
+    width: 100%;
+    background-color: #ff7300;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Évite tout débordement horizontal */
+}
+
+
+/* HEADER --------------------------------------------------------------------------*/
+
+#back{
+  height: 50px;
+  margin-left: 30px;
+}
+
+.header {
+    background-color: #dc6300;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 50px;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right:50px;
+}
+
+#titre {
+    color: #ffffff;
+    font-family: 'Jura';
+    padding-left: 25px;
+    font-size: 55px; 
+}
+
+#google_font_playpen {
+    width: 100px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#google_font_playpen:hover {
+    box-shadow: 5px 5px 5px black;
+    transition: 0.3s;
+}
+
+
+/* CONTENT ----------------------------------------------------------------------------------------*/
+
+.content{
+  width:100%;
+  margin-left: 20px;
+}
+.playpen_bio{
+  margin-top:50px;
+  line-height: 1.5;
+  margin-right:50px;
+}
+
+ .exemples_playpen{
+    margin-top: 50px;
+    height: 200px; /* Hauteur ajustable selon tes images */
+    overflow-x: auto; /* Scroll horizontal */
+    overflow-y: hidden; /* Empêche le scroll vertical */
+    white-space: nowrap; /* Les images restent sur une seule ligne */
+    display: flex; /* Permet d'aligner les images correctement */
+    gap: 10px; /* Espacement entre les images */
+    padding: 10px;
+    background-color: #dc6300;
+    border-radius: 10px;
+    margin-right:50px;
+ }
+
+ .exemples_playpen img {
+  border-radius: 20px;
+ }
+
+
+/* LOOK OF THE SCROLLING BAR --------------------------------------------------------*/
+
+ .exemples_playpen::-webkit-scrollbar {
+    height: 10px; /* Épaisseur de la barre */
+}
+
+.exemples_playpen::-webkit-scrollbar-track {
+    background: #ff8a2b; /* Couleur du fond */
+    border-radius: 10px;
+}
+
+.exemples_playpen::-webkit-scrollbar-thumb {
+    background: white; /* Couleur du curseur */
+    border-radius: 10px;
+}
+
+.exemples_playpen::-webkit-scrollbar-thumb:hover {
+    background: #a84600; /* Couleur au survol */
+}
+
+
+ /* AUTHOR SECTION ------------------------------------------------------------------------*/
+
+ 
+.author_section {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Empêche le débordement */
+    max-width: 100vw; /* Limite la largeur pour éviter le scroll horizontal */
+    text-decoration: none;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between; /* Répartit l'espace */
+    align-items: center;
+    box-sizing: border-box; /* Évite que padding élargisse l'élément */
+    margin-top: 50px;
+    overflow-x: hidden; /* (Facultatif) Prévient le débordement */
+}
+
+.pic_and_bio_section{
+  display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+#author_pic {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover; /* Évite la déformation */
+}
+
+#author_text {
+    width: 100%;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#author_bio {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+#author_bio:hover {
+    color: #ff7300;
+    background-color: #ffffff;
+    transition: 0.3s;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+#playpen_video{
+  width: 75%;
+  height: auto;
+  margin-right: 30px;
+}
+
+
+
+/*MEDI ADAPTATION ------------------------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+    .author_section {
+        flex-direction: column; /* Empile les éléments en mobile */
+        align-items: center;
+        text-align: center;
+    }
+
+    .author_pic, #author_text, #playpen_video {
+        width: 100%; /* Prend toute la largeur en mobile */
+        max-width: 90%; /* Empêche que ça devienne trop large */
+    }
+
+    .pic_and_bio_section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+}
+
+
+
+    </style>

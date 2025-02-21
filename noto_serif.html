@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playpen Sans</title>
+  <link rel="icon" href="assets/Tabs_logo.png">
+
+
+   <!-- Ajout des fonts ici -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Montserrat:ital@0;1&family=Noto+Serif:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+
+
+   <body>
+
+    <a href="Index.html">
+      <img id="back" src="assets/Return--Streamline-Carbon.png">
+    </a>
+          <nav class="header">
+            <p id="titre"> <b>NOTO SERIF </b><p>
+            <a  href="https://fonts.google.com/specimen/Playpen+Sans">
+              <img id="google_font_playpen" src="assets/Google_font.png">
+            </a>
+          </nav>
+ 
+          <div class="content">
+            <p class="playpen_bio"> Noto is a free font family comprising over 100 individual computer fonts, which are together designed to cover all the scripts encoded in the Unicode standard. As of November 2024, Noto covers around 1,000 languages ​​and 162 writing systems. As of October 2016, Noto fonts cover all 93 scripts defined in Unicode version 6.1 (April 2012), although fewer than 30,000 of the nearly 75,000 CJK unified ideographs in version 6.0 are covered. In total, Noto fonts cover over 77,000 characters, which is around half of the 149,186 characters defined in Unicode 15.0 (released in September 2022).
+
+              <br> <br> The Noto family is designed with the goal of achieving visual harmony (e.g., compatible heights and stroke thicknesses) across multiple languages/scripts. Commissioned by Google, the font is licensed under the SIL Open Font License. Until September 2015, the fonts were under the Apache License 2.0.</p>
+              
+              <div class="exemples_playpen">
+              <img src="assets/noto/noto1.png">
+              <img src="assets/noto/noto2.png">
+              <img src="assets/noto/noto3.png"> 
+              <img src="assets/noto/noto4.png">
+              <img src="assets/noto/noto5.png">
+              <img src="assets/noto/noto6.png">
+           </div>
+          
+            <div class="author_section">
+              <div class="pic_and_bio_section">
+                <a href="https://mattesontypographics.com/"> 
+                <img id="author_pic" src="assets/noto/Steve Matteson.webp"></a>
+                <p id="author_text"> <b> <a id="author_bio" href="https://mattesontypographics.com/">Steve Matteson</a></b> (born 1965) is an American typeface designer whose work is included in several computer operating systems and embedded in game consoles, cell phones and other electronic devices. He is the designer of the Microsoft font family Segoe included since Windows XP, of the Droid font collection used in the Android mobile device platform, and designed the brand and user-interface fonts used in both the original Microsoft Xbox and the Xbox 360. He designed more than 50 different typeface that are now mostly available for free on font platforms. </p>
+              </div>
+              <img src="assets/noto/noto_display.png">
+              
+            </div>
+             
+          </div>
+       
+
+    <style> 
+
+
+* {
+    box-sizing: border-box; /* Évite que les marges et paddings dépassent */
+}
+
+body {
+    width: 100%;
+    background-color: #ff7300;
+    padding: 0;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden; /* Évite tout débordement horizontal */
+}
+
+
+/* HEADER --------------------------------------------------------------------------*/
+
+#back{
+  height: 50px;
+  margin-left: 30px;
+}
+
+.header {
+    background-color: #dc6300;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    gap: 50px;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right:50px;
+}
+
+#titre {
+    color: #ffffff;
+    font-family: 'Playpen sans';
+    padding-left: 25px;
+    font-size: 50px; 
+}
+
+#google_font_playpen {
+    width: 100px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+#google_font_playpen:hover {
+    box-shadow: 5px 5px 5px black;
+    transition: 0.3s;
+}
+
+
+/* CONTENT ----------------------------------------------------------------------------------------*/
+
+.content{
+  width:100%;
+  margin-left: 20px;
+}
+.playpen_bio{
+  margin-top:50px;
+  line-height: 1.5;
+  margin-right:50px;
+}
+
+ .exemples_playpen{
+    margin-top: 50px;
+    height: 200px; /* Hauteur ajustable selon tes images */
+    overflow-x: auto; /* Scroll horizontal */
+    overflow-y: hidden; /* Empêche le scroll vertical */
+    white-space: nowrap; /* Les images restent sur une seule ligne */
+    display: flex; /* Permet d'aligner les images correctement */
+    gap: 10px; /* Espacement entre les images */
+    padding: 10px;
+    background-color: #dc6300;
+    border-radius: 10px;
+    margin-right:50px;
+ }
+
+ .exemples_playpen img {
+  border-radius: 20px;
+ }
+
+
+/* LOOK OF THE SCROLLING BAR --------------------------------------------------------*/
+
+ .exemples_playpen::-webkit-scrollbar {
+    height: 10px; /* Épaisseur de la barre */
+}
+
+.exemples_playpen::-webkit-scrollbar-track {
+    background: #ff8a2b; /* Couleur du fond */
+    border-radius: 10px;
+}
+
+.exemples_playpen::-webkit-scrollbar-thumb {
+    background: white; /* Couleur du curseur */
+    border-radius: 10px;
+}
+
+.exemples_playpen::-webkit-scrollbar-thumb:hover {
+    background: #a84600; /* Couleur au survol */
+}
+
+
+ /* AUTHOR SECTION ------------------------------------------------------------------------*/
+
+ 
+.author_section {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Empêche le débordement */
+    max-width: 100vw; /* Limite la largeur pour éviter le scroll horizontal */
+    text-decoration: none;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between; /* Répartit l'espace */
+    align-items: center;
+    box-sizing: border-box; /* Évite que padding élargisse l'élément */
+    margin-top: 50px;
+    overflow-x: hidden; /* (Facultatif) Prévient le débordement */
+}
+
+.pic_and_bio_section{
+  display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+#author_pic {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover; /* Évite la déformation */
+}
+
+#author_text {
+    width: 100%;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#author_bio {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+#author_bio:hover {
+    color: #ff7300;
+    background-color: #ffffff;
+    transition: 0.3s;
+    border-radius: 20px;
+    padding: 3px;
+}
+
+#playpen_video{
+  width: 65%;
+  margin-right: 30px;
+}
+
+
+
+/*MEDI ADAPTATION ------------------------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+    .author_section {
+        flex-direction: column; /* Empile les éléments en mobile */
+        align-items: center;
+        text-align: center;
+    }
+
+    .author_pic, #author_text, #playpen_video {
+        width: 100%; /* Prend toute la largeur en mobile */
+        max-width: 90%; /* Empêche que ça devienne trop large */
+    }
+
+    .pic_and_bio_section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+}
+
+
+
+    </style>
